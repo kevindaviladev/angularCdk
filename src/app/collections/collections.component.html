@@ -1,0 +1,21 @@
+<div>
+  <input
+    type="checkbox"
+    [checked]="allSelected"
+    (change)="toggleMasterSelection()">
+  <label>Marcar todas</label>
+</div>
+
+<div *ngFor="let item of optionList">
+  <input
+    type="checkbox"
+    [id]="item.id"
+    [checked]="selection.isSelected(item)"
+    (change)="selection.toggle(item)">
+  <label [for]="item.id">{{item.title}}</label>
+</div>
+
+<pre>
+
+  <code>{{ selection.selected | json }}</code>
+</pre>

@@ -1,0 +1,8 @@
+<button (click)="openFromComponent()">Open component</button>
+<button (click)="openFromTemplate()">Open template</button>
+
+<ng-template
+  cdk-portal
+  #overlayTemplate="cdkPortal">
+  <h3>From template!!</h3>
+</ng-template>

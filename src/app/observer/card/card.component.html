@@ -1,0 +1,9 @@
+<div class="card">
+  <span>Title</span>
+  <hr>
+  <div
+    class="content"
+    (cdkObserveContent)="projectContentChanged($event)">
+    <ng-content></ng-content>
+  </div>
+</div>

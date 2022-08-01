@@ -1,0 +1,8 @@
+<button (click)="toggleTemplate()">Toggle!</button>
+<app-card>
+  <ng-container [ngTemplateOutlet]="isFirstShowed ? first : other"></ng-container>
+</app-card>
+
+<ng-template #first>First!</ng-template>
+
+<ng-template #other>Other</ng-template>
